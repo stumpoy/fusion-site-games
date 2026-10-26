@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="por-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Home- GameZone </title>
+
+
+    <style>
+        body{
+            margin: 0;
+            font-family: monospace;
+            background-color: #ffffff;
+            color: #ffffff;
+        }
+
+        header{
+            background-color: #e6ffb1fa;
+            padding: 5px;
+            text-align: center;
+            border-bottom: 3px solid #deedb9;
+        }
+        
+        header h1{
+            color: #9BC53D;
+            font-size: 50px;
+            
+        }
+
+        nav{
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a{
+            color: #C85350;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        nav a:hover{
+            color: #ae3937;
+            transition: 0.3s;
+            font-size: 23px;
+        }
+
+        #banner{
+            text-align: center;
+            padding: 40px;
+        }
+
+        #banner p{
+            color: #9BC53D;
+        }
+
+        #banner img{
+            width: 650px;
+            box-shadow: 0px 0px 15px rgb(255, 145, 35)
+            
+        }
+
+        #banner img:hover{
+            width: 680px;
+            transition: 0.5s;
+              box-shadow: 0px 0px 30px rgb(255, 145, 35)
+           
+            
+        }
+
+        h2{
+             color: #5BC0EB;
+             font-size: 40px;
+        }
+
+        h2:hover{
+            font-size: 45px;
+            transition: 0.5s;
+        }
+
+        p{
+            font-size: 17px;
+        }
+
+        #jogos{
+            display: flex;
+            /*consegue ajustar um do lado do outro*/
+            justify-content: center;
+            gap: 20px;
+            /*espaçamento entre as divs*/
+            flex-wrap: wrap;
+            padding: 20px;
+
+        }
+
+        .card{
+            background-color: #3c7793;
+            width: 250px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .card img{
+            width: 100%;
+            /*largura; ajustamento da imagem*/
+            border-radius: 10px;
+            height:160px;
+
+        }
+
+        .card h3{
+            color: #ffffff;
+        }
+
+        .card:hover{
+            width: 280px;
+            transition: 0.5s;
+        }
+
+        .card h3 a{
+            display:contents;
+            color:inherit;
+        }
+
+        .card h3 a:hover{
+            color: #1c3440;
+            transition: 0.3s;
+        }
+        
+        /* --- SEÇÃO RANKING (PALETA VERDE CLARO) --- */
+        #ranking {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        #ranking h2 {
+            font-size: 1.8rem;
+            color: #2d6a4f;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 5px solid #52b788;
+            padding-left: 12px;
+            text-transform: uppercase;
+        }
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(45, 106, 79, 0.06);
+            border: 1px solid #e8f5e9;
+            margin-bottom: 40px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            text-align: left;
+            min-width: 500px;
+        }
+        th {
+            background-color: #40916c; /* Verde Principal das Tabelas */
+            color: #ffffff;
+            padding: 16px 20px;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        td {
+            padding: 14px 20px;
+            border-bottom: 1px solid #f0f7f4;
+            color: #2d6a4f;
+            font-size: 1rem;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        tr:nth-child(even) {
+            background-color: #f7fbf9; /* Efeito zebrado suave */
+        }
+        tr:hover {
+            background-color: #d8f3dc; /* Destaque Mint ao passar o mouse */
+            transition: background-color 0.15s ease;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .col-pos {
+            font-weight: bold;
+            width: 100px;
+            color: #52b788;
+        }
+        .game-title {
+            font-weight: 600;
+            color: #1b4332;
+        }
+        .rating-badge {
+            background-color: #e8f5e9;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            color: #2d6a4f;
+            font-size: 0.9rem;
+            display: inline-block;
+        }
+
+
+
+        footer{
+             text-align: center;
+             background-color: #9BC53D;
+             padding: 20px;
+             margin-top: 30px;
+
+        }
+
+
+    </style>
+
+
+
+
+</head>
+
+
+<body>
+    <header>
+        <h1>🎮 Fusion 🎾</h1>
+    </header>
+
+    <nav>
+        <a href="#banner">Início</a>
+        <a href="#jogos">Jogos</a>
+        <a href="#ranking">Ranking</a>
+        <a href="./login.html">Sair</a>
+    </nav>
+
+    <section id="banner">
+        <h2>Bem vindo à Fusion!!</h2>
+        <p>“Na Fusion, cada partida é mais do que um jogo, é a chance de superar limites, </p>
+        <p>vencer desafios e provar que a verdadeira vitória começa na sua determinação.”</p>
+        <img src="./img/marioo.jpg" alt="esporte jogo">
+    </section>
+
+    <section id="jogos">
+
+        <div class="card"> 
+            <img src="img/Mario & Sonic games_.jpg" alt="Jogos de Corrida">
+            <h3>
+                <a href="./sonicmario.html"> Mario & Sonic at the Olyimpic Games</a>
+            </h3>
+            <p>A franquia Mario & Sonic nos Jogos Olímpicos é uma série de jogos eletrônicos de esportes estilo crossover que reúne os personagens do universo do Super Mario (da Nintendo) e de Sonic the Hedgehog (da Sega) para competir em eventos oficiais dos Jogos Olímpicos.</p>
+        </div>
+
+
+         <div class="card"> 
+            <img src="img/Wii Sports Club Release Date_ October 30, 2013 Platform_ Wii U.jpg" alt="Jogos de Fantasia">
+              <h3>
+                <a href="./wiisports.html"> Wii Sports</a>
+              </h3>
+            <p>Wii Sports oferece cinco experiências desportivas distintas, utilizando o Comando Remoto Wii para proporcionar uma sensação natural, intuitiva e realista. </p>
+        </div>
+
+
+         <div class="card"> 
+            <img src="img/EA SPORTS FC 26 (PC) – Global Steam Account for Gamers & Streamers.jpg" alt="Jogos de Espaço">
+           
+              <h3>
+                <a href="./easports.html"> EA Sports FC 26</a>
+              </h3>
+            <p>Jogue do seu jeito no EA SPORTS FC™ 26 com condução mais responsiva, posicionamento de IA mais inteligente e movimentos mais precisos </p>
+        </div>
+
+    </section>
+
+    <section id="ranking">
+        <h2>🏆 TOP 15 Melhores Jogos de Esporte</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="titulo2">Posição</th>
+                        <th>Jogo</th>
+                        <th>Esporte</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="posicao">1</td><td class="titulo">Rocket League</td><td>Futebol + Veículos</td></tr>
+                    <tr><td class="posicao">2</td><td class="titulo">EA Sports FC 26</td><td>Futebol</td></tr>
+                    <tr><td class="posicao">3</td><td class="titulo">NBA 2K26</td><td>Basquete</td></tr>
+                    <tr><td class="posicao">4</td><td class="titulo">MLB The Show 25</td><td>Beisebol</td></tr>
+                    <tr><td class="posicao">5</td><td class="titulo">F1 25</td><td>Fórmula 1</td></tr>
+                    <tr><td class="posicao">6</td><td class="titulo">Forza Horizon 5</td><td>Corrida</td></tr>
+                    <tr><td class="posicao">7</td><td class="titulo">EA Sports College Football 26</td><td>Futebol Americano</td></tr>
+                    <tr><td class="posicao">8</td><td class="titulo">Madden NFL 26</td><td>Futebol Americano</td></tr>
+                    <tr><td class="posicao">9</td><td class="titulo">WWE 2K26</td><td>Wrestling</td></tr>
+                    <tr><td class="posicao">10</td><td class="titulo">EA Sports UFC 6</td><td>MMA</td></tr>
+                    <tr><td class="posicao">11</td><td class="titulo">PGA Tour 2K25</td><td>Golfe</td></tr>
+                    <tr><td class="posicao">12</td><td class="titulo">EA Sports PGA Tour</td><td>Golfe</td></tr>
+                    <tr><td class="posicao">13</td><td class="titulo">Riders Republic</td><td>Esportes Radicais</td></tr>
+                    <tr><td class="posicao">14</td><td class="titulo">Tony Hawk's Pro Skater 1+2</td><td>Skate</td></tr>
+                    <tr><td class="posicao">15</td><td class="titulo">eFootball 2026</td><td>Futebol</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>🔥 Elite Pack: Top 5 de 2026</h2>
+        <div class="table-container">
+            <table>
+
+                <thead>
+                    <tr>
+                        <th class="titulo1" style="width: 120px;">Posição</th>
+                        <th>Jogo</th>
+                        <th class="" style="width: 150px;">Nota Geral</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr><td class="posicao" style="color: #ca8a04;">🥇 1º</td><td class="titulo">Rocket League</td><td class=""><span class="avaliacao">9,7/10</span></td></tr>
+                    <tr><td class="posicao" style="color: #94a3b8;">🥈 2º</td><td class="titulo">EA Sports FC 26</td><td class=""><span class="avaliacao">9,5/10</span></td></tr>
+                    <tr><td class="posicao" style="color: #b45309;">🥉 3º</td><td class="titulo">NBA 2K26</td><td class=""><span class="avaliacao">9,4/10</span></td></tr>
+                    <tr><td class="posicao">4º</td><td class="titulo">MLB The Show 25</td><td class=""><span class="avaliacao">9,3/10</span></td></tr>
+                    <tr><td class="posicao">5º</td><td class="titulo">F1 25</td><td class=""><span class="avaliacao">9,1/10</span></td></tr>
+                </tbody>
+
+            </table>
+        </div>
+
+    </section>
+
+
+    
+       
+
+      <footer>
+            &copy;Fusion 2026
+        </footer>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

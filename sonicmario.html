@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="por-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario & Sonic at the Olyimpic Gamest</title>
+
+    <style>
+
+         body{
+            margin: 0;
+            font-family: monospace;
+            background-color: #ffffff;
+            color: #ffffff;
+        }
+
+        header{
+            background-color: #e6ffb1fa;
+            padding: 5px;
+            text-align: center;
+            border-bottom: 3px solid #deedb9;
+        }
+        
+        header h1{
+            color: #9BC53D;
+            font-size: 50px;
+            
+        }
+
+        nav{
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a{
+            color: #C85350;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        nav a:hover{
+            color: #ae3937;
+            transition: 0.3s;
+            font-size: 23px;
+        }
+
+         #jogos{
+            display: flex;
+            /*consegue ajustar um do lado do outro*/
+            justify-content: center;
+            gap: 20px;
+            /*espaçamento entre as divs*/
+            flex-wrap: wrap;
+            padding: 20px;
+
+        }
+
+        #game{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 20px;
+
+        }
+
+        .card{
+            background-color: #3c7793;
+            width: 550px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .card img{
+            width: 100%;
+            /*largura; ajustamento da imagem*/
+            border-radius: 10px;
+            height: 350px;
+
+        }
+
+        .card h3{
+            color: #ffffff;
+        }
+
+        .card:hover{
+            width: 570px;
+            transition: 0.5s;
+        }
+
+        .btn-game{
+            margin-top: 20px;
+            background-color: #034261;
+            color: aliceblue;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-game:hover{
+            background-color: #236a8b;
+            color: #ffffff;
+            box-shadow: 0px 0px 20px #072b4a;
+            transform: translateY(-2px);
+
+        }
+
+        .btn-game:active{
+            transform: scale(0.98);
+        }
+        
+        /*o hover seria para deixar o botaõ sobresaltado, e o active reduziria ele se pressionado*/
+
+
+
+
+    </style>
+
+</head>
+
+<body>
+    
+    <header>
+        <h1>🎮 Fusion 🎾</h1>
+    </header>
+
+    <nav>
+        <a href="./home.html">Início</a>
+        <a href="./home.html#jogos">Jogos</a>
+        <a href="./home.html#ranking">Ranking</a>
+        <a href="./login.html">Sair</a>
+    </nav>
+    <section id="game">
+       <div class="card"> 
+            <img src="img/Mario & Sonic games_.jpg" alt="Jogos de Corrida">
+            <a href="http://youtu.be/171r2_moOPc?si=cggJFFS4ojDCvj7P" target="_blank" class="btn-game">🎮 JOGAR</a>
+            <p>A franquia Mario & Sonic nos Jogos Olímpicos é uma série de jogos eletrônicos de esportes estilo crossover que reúne os personagens do universo do Super Mario (da Nintendo) e de Sonic the Hedgehog (da Sega) para competir em eventos oficiais dos Jogos Olímpicos.</p>
+        </div>
+    </section>
+        
+
+
+    
+</body>
+</html>
